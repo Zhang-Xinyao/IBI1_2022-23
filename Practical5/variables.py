@@ -2,9 +2,11 @@ a=-3.19
 b=-118.24
 c=116.39
 d=a-b
-e=a-c
-d>e
-# The result is "True". d is greater than e so Rob travel further to Los Angeles.
+e=c-a
+if d>e:
+ print("Los Angeles")
+if d<e:
+ print("Haining")
 X=True
 Y=False
 W=X and Y
