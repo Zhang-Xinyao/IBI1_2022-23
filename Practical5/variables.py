@@ -9,6 +9,7 @@ if d>e:
 if d<e:
 #Rob travels further to Haining
  print("Haining")
+#Answer: Haining
 X=True
 Y=False
 W=X and Y
