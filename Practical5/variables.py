@@ -4,8 +4,10 @@ c=116.39
 d=a-b
 e=c-a
 if d>e:
+#Rob travels further to Los Angles
  print("Los Angeles")
 if d<e:
+#Rob travels further to Haining
  print("Haining")
 X=True
 Y=False
