@@ -14,5 +14,6 @@ plt.show()
 #make a dictionary containing the information about the students' favourite movie gernes
 genre={'Comedy':73,'Action':42,'Romance':38,'Fantasy':28,'Science-fiction':22,'Horror':19,'Crime':18,'Documentary':12,'History':8,'War':7}
 #input the variable"Comedy" and output the number of students
-print(genre['Comedy'])
+imput='Comedy'
+print(genre[imput])
 
