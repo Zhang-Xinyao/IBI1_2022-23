@@ -27,7 +27,7 @@ print(covid_data.loc[Afghanistan_row,column])
 new_data=covid_data.loc[covid_data['date']=='2020-03-31',["location","new_cases","new_deaths"]]
 column = [False,False,True,True,False,False]
 print(np.mean(covid_data.loc[covid_data['date']=='2020-03-31',column]))
-#the mean number of new cases and new deaths on 31 March 2020
+#the mean number of new cases and new deaths on 31st March 2020
 print(37.928205/640.461538)
 x=covid_data.loc[covid_data['date']=='2020-03-31',"new_cases"]
 y=covid_data.loc[covid_data['date']=='2020-03-31',"new_deaths"]
