@@ -29,8 +29,8 @@ column = [False,False,True,True,False,False]
 print(np.mean(covid_data.loc[covid_data['date']=='2020-03-31',column]))
 #the mean number of new cases and new deaths on 31st March 2020
 print(37.928205/640.461538)
-x=covid_data.loc[covid_data['date']=='2020-03-31',"new_cases"]
-y=covid_data.loc[covid_data['date']=='2020-03-31',"new_deaths"]
+x=new_data.loc[:,"new_cases"]
+y=new_data.loc[:,"new_deaths"]
 plt.boxplot([x,y],vert=True,showfliers=False,showbox=True,showcaps=True,notch=False,whis=1.5,patch_artist=True,meanline=False,labels=["new cases","new deaths"])
 plt.title('the new cases and new deaths on March 31th in 2020')
 plt.show()
