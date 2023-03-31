@@ -27,18 +27,26 @@ print(covid_data.loc[Afghanistan_row,column])
 new_data=covid_data.loc[covid_data['date']=='2020-03-31',["location","new_cases","new_deaths"]]
 column = [False,False,True,True,False,False]
 print(np.mean(covid_data.loc[covid_data['date']=='2020-03-31',column]))
-#the mean number of new cases and new deaths on 31st March 2020
+#the mean number of new cases and new deaths on 31 March 2020
 print(37.928205/640.461538)
-x=new_data.loc[:,"new_cases"]
-y=new_data.loc[:,"new_deaths"]
-plt.boxplot([x,y],vert=True,showfliers=False,showbox=True,showcaps=True,notch=False,whis=1.5,patch_artist=True,meanline=False,labels=["new cases","new deaths"])
+x=new_data.loc[new_data['location']!='world',"new_cases"]
+y=new_data.loc[new_data['location']!='world',"new_deaths"]
+plt.boxplot([x,y],vert=True,
+            showfliers=False,
+            showbox=True,
+            showcaps=True,
+            notch=False,
+            whis=1.5,
+            patch_artist=True,meanline=False,labels=["new cases","new deaths"])
 plt.title('the new cases and new deaths on March 31th in 2020')
 plt.show()
-plt.plot(covid_data.loc[:,"date"],covid_data.loc[:,"new_cases"],"c+")
+world_date=covid_data.loc[covid_data['location']=='World',"date"]
+world_data1=covid_data.loc[covid_data['location']=='World',"new_cases"]
+plt.plot(world_date,world_data1,"c+")
 #"b+" represents the color of the plot
-plt.plot(covid_data.loc[:,"date"],covid_data.loc[:,"new_deaths"],"b+")
-world_dates=covid_data.loc[:,"date"]
-plt.xticks(world_dates.iloc[0:len(world_dates):4],rotation=-90)
+world_data2=covid_data.loc[covid_data['location']=='World',"new_deaths"]
+plt.plot(world_date,world_data2,"b+")
+plt.xticks(world_date.iloc[0:len(world_date):4],rotation=-90)
 plt.title('The new cases and new deaths in the world')
 plt.xlabel("dates")
 plt.ylabel("the number of new cases and deaths")
