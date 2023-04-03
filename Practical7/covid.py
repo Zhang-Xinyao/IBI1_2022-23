@@ -54,10 +54,11 @@ plt.show()
 #xticks only keeps the dates every n days ago,rotation means the angle of the xticks with x axis
 #start to answer the question
 Australia_data=covid_data.loc[covid_data['location']=='Australia',:]
-plt.plot(Australia_data.loc[:,"date"],Australia_data.loc[:,"total_cases"],"b+")
-plt.plot(Australia_data.loc[:,"date"],Australia_data.loc[:,"total_deaths"],"r+")
+plt.plot(Australia_data.loc[:,"date"],Australia_data.loc[:,"total_cases"],"bo")
+plt.plot(Australia_data.loc[:,"date"],Australia_data.loc[:,"total_deaths"],"ro")
 Australia_dates=Australia_data.loc[:,"date"]
 plt.xticks(Australia_dates.iloc[0:len(Australia_dates):4],rotation=-90)
+plt.yticks([0,2000,4000,6000,8000,10000])
 plt.title("Total cases and deaths in Australia")
 plt.xlabel('date')
 plt.ylabel('number')
