@@ -2,5 +2,5 @@ How many total cases and total deaths developed during December 31st in 2019 to 
 I start to answer this question from line 56.
 The result satisfies my expectations.
 I used "loc" to get the column with title of "total_cases" and "total_deaths".
-"b+" was used to color the points of "total_cases" in blue and "r+" was used to color the points of "total_deaths" in red
+"bo" was used to color the points of "total_cases" in blue and "ro" was used to color the points of "total_deaths" in red
 "Australia_dates.iloc[0:len(Australia_dates):4]" was used to get the dates every 4 days after December 27th in 2019
