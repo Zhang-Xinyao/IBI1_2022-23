@@ -3,10 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 os.chdir("/Users/zhangxinyao/PYTHON/IBI1_2022-23/Practical7")
+#change to the directory where the "full_data.csv" exists
 print(os.getcwd())
 print(os.listdir())
 covid_data = pd.read_csv("full_data.csv")
 print(covid_data.head(5))
+#show the first five rows in the file
 print(covid_data.info())
 print(covid_data.describe())
 print(covid_data.iloc[0,1])
@@ -25,6 +27,7 @@ print(covid_data.loc[Afghanistan_row])
 column = [False,True,True,True,False,False]
 print(covid_data.loc[Afghanistan_row,column])
 new_data=covid_data.loc[covid_data['date']=='2020-03-31',["location","new_cases","new_deaths"]]
+#define the new data as the data of new cases and new deaths around the world on 2020-03-31
 column = [False,False,True,True,False,False]
 print(np.mean(covid_data.loc[covid_data['date']=='2020-03-31',column]))
 #the mean number of new cases and new deaths on 31 March 2020
@@ -40,6 +43,7 @@ plt.boxplot([x,y],vert=True,
             patch_artist=True,meanline=False,labels=["new cases","new deaths"])
 plt.title('the new cases and new deaths on March 31th in 2020')
 plt.show()
+#draw the bloxplot about the new cases and new deaths in the world on 2020-03-31
 world_date=covid_data.loc[covid_data['location']=='World',"date"]
 world_data1=covid_data.loc[covid_data['location']=='World',"new_cases"]
 plt.plot(world_date,world_data1,"c+")
