@@ -9,3 +9,5 @@ def calculator(x, y):
         print('Yes')
     else:
         print('No')
+#example: salary=3900 and value=18000
+calculator(3900,18000)
