@@ -11,5 +11,5 @@ class triathlon(object):
         self.g=total
 
 #the example
-x=triathlon('Hua','Li','Beijing','20 min','60 min','30 min','110min')
+x=triathlon('John','Wilson','London','20 min','60 min','30 min','110 min')
 print(x.a,x.b,x.c,x.d,x.e,x.f,x.g)
