@@ -4,7 +4,9 @@ def calculator(sequence):
     sequence=sequence.upper()
     #calculate the distance between the start codon and end codon
     distance=sequence.find('TGA')-sequence.find('ATG')-3
-    print(distance/len(sequence))
+    rate=distance/len(sequence)
+    turnover_rate=format(rate,'.4%')
+    print(turnover_rate)
     #judge the sequence is a protein-coding sequence or non-coding sequence or an unclear sequence
     if distance/len(sequence)>0.5:
          print('protein-coding')
